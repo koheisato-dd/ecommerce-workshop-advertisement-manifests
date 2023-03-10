@@ -20,8 +20,8 @@ spec:
       maxSurge: 1
       maxUnavailable: 1
       steps:
-        - setWeight: 25
-        - pause: {}
+      - setWeight: 25
+      - pause: {}
   template:
     metadata:
       labels:
