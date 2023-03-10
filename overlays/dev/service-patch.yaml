@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    tags.datadoghq.com/version: "1.1"
+    tags.datadoghq.com/version: "2.0"
   name: advertisements
 spec:
   selector:
-    tags.datadoghq.com/version: "1.1"
+    tags.datadoghq.com/version: "2.0"
