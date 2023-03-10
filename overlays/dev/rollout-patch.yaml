@@ -8,4 +8,4 @@ metadata:
 #    spec:
 #      containers:
 #      - name: advertisements
-#        image: shocnt/ads-servicelatest
+#        image: shocnt/ads-service-fixed:latest
