@@ -4,10 +4,10 @@ metadata:
   name: advertisements
 spec:
   template:
+    metadata:
+      labels:
+        tags.datadoghq.com/version: "2.0"
     spec:
       containers:
       - image: "shocnt/ads-service:v2"
         name: advertisements
-        env:
-          - name: DD_VERSION
-            value: "2.0"

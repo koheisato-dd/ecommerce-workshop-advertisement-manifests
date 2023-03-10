@@ -25,6 +25,7 @@ spec:
       labels:
         tags.datadoghq.com/env: development
         tags.datadoghq.com/service: advertisements-service
+        tags.datadoghq.com/version: VERSION
         app: ecommerce
       annotations:
         ad.datadoghq.com/advertisements.logs: '[{"source": "python", "service": "advertisements-service"}]'
@@ -53,13 +54,15 @@ spec:
           - name: DD_ENV
             valueFrom:
               fieldRef:
-                fieldPath: metadata.labels['tags.datadoghq.com/env']
+                fieldPath: spec.template.metadata.labels['tags.datadoghq.com/env']
           - name: DD_SERVICE
             valueFrom:
               fieldRef:
-                fieldPath: metadata.labels['tags.datadoghq.com/service']
+                fieldPath: spec.template.metadata.labels['tags.datadoghq.com/service']
           - name: DD_VERSION
-            value: VERSION
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.template.metadata.labels['tags.datadoghq.com/version']
           - name: DD_AGENT_HOST
             valueFrom:
               fieldRef:
