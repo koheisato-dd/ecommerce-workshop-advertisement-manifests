@@ -4,7 +4,7 @@ metadata:
   labels:
     tags.datadoghq.com/service: advertisements-service
     tags.datadoghq.com/env: development
-    tags.datadoghq.com/version: "1.0"
+    tags.datadoghq.com/version: VERSION
     app: ecommerce
   name: advertisements
 spec:
@@ -15,5 +15,5 @@ spec:
   selector:
     tags.datadoghq.com/service: advertisements-service
     tags.datadoghq.com/env: development
-    tags.datadoghq.com/version: "1.0"
+    tags.datadoghq.com/version: VERSION
     app: ecommerce
