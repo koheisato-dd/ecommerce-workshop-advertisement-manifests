@@ -54,15 +54,15 @@ spec:
           - name: DD_ENV
             valueFrom:
               fieldRef:
-                fieldPath: spec.template.metadata.labels['tags.datadoghq.com/env']
+                fieldPath: metadata.labels['tags.datadoghq.com/env']
           - name: DD_SERVICE
             valueFrom:
               fieldRef:
-                fieldPath: spec.template.metadata.labels['tags.datadoghq.com/service']
+                fieldPath: metadata.labels['tags.datadoghq.com/service']
           - name: DD_VERSION
             valueFrom:
               fieldRef:
-                fieldPath: spec.template.metadata.labels['tags.datadoghq.com/version']
+                fieldPath: metadata.labels['tags.datadoghq.com/version']
           - name: DD_AGENT_HOST
             valueFrom:
               fieldRef:
