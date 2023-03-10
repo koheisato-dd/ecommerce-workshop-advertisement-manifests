@@ -14,5 +14,5 @@ spec:
         tags.datadoghq.com/version: "1.1"
     spec:
       containers:
-      - image: "shocnt/ads-service-v1:latest"
+      - image: "shocnt/ads-service:v1"
         name: advertisements
