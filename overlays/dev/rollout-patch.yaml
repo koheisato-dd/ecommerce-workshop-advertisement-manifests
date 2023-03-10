@@ -1,11 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
+  labels:
+    tags.datadoghq.com/version: "1.1"
   name: advertisements
-#spec:
-#  replicas: 1
-#  template:
-#    spec:
-#      containers:
-#      - name: advertisements
-#        image: shocnt/ads-service-fixed:latest
+spec:
+  selector:
+    matchLabels:
+      tags.datadoghq.com/version: "1.1"
+  template:
+    metadata:
+      labels:
+        tags.datadoghq.com/version: "1.1"
+    spec:
+      containers:
+      - image: "shocnt/ads-service-v1:latest"
+        name: advertisements
