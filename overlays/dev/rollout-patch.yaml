@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: advertisements
+#spec:
+#  replicas: 1
+#  template:
+#    spec:
+#      containers:
+#      - name: advertisements
+#        image: shocnt/ads-servicelatest
