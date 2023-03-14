@@ -18,6 +18,14 @@ spec:
       maxSurge: 1
       maxUnavailable: 1
       steps:
+      - experiment:
+          duration: 15m
+          templates:
+          - name: canary
+            specRef: canary
+          analyses:
+          - name: canary-experiment
+            templateName: test-analysis
       - setWeight: 25
       - pause: {}
   template:
