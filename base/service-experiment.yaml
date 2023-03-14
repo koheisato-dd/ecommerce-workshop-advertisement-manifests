@@ -15,4 +15,4 @@ spec:
     tags.datadoghq.com/service: advertisements-service
     tags.datadoghq.com/env: development
     app: ecommerce
-    tags.datadoghq.com/version: CANARY-VERSION
+    deploy: experiment
