@@ -22,6 +22,10 @@ spec:
           duration: 15m
           templates:
           - name: canary
+            metadata:
+              labels:
+                labels:
+                  deploy: experiment
             specRef: canary
           analyses:
           - name: canary-experiment
