@@ -24,8 +24,7 @@ spec:
           - name: canary
             metadata:
               labels:
-                labels:
-                  deploy: experiment
+                deploy: experiment
             specRef: canary
           analyses:
           - name: canary-experiment
