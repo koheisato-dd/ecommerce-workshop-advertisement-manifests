@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
 - rollout.yaml
 - service.yaml
-- service-experiment.yaml
