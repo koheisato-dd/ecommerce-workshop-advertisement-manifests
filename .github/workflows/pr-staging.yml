@@ -1,4 +1,4 @@
-name: pr
+name: Create PR to Staging
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'deploy/*'
 
 env:
-  BASE_BRANCH: main
+  BASE_BRANCH: staging
   REVIEWER: dd-shocnt
 
 jobs:
