@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   labels:
-    tags.datadoghq.com/env: prod
+    tags.datadoghq.com/env: staging
   name: advertisements
 spec:
   replicas: 1
   selector:
     matchLabels:
-      tags.datadoghq.com/env: prod
+      tags.datadoghq.com/env: staging
   strategy:
     canary:
       steps:
@@ -16,7 +16,7 @@ spec:
   template:
     metadata:
       labels:
-        tags.datadoghq.com/env: prod
+        tags.datadoghq.com/env: staging
         tags.datadoghq.com/version: "58611e47c3f15c2da59e430bdd9bb95b681d376f"
     spec:
       containers:
