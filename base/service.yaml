@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     tags.datadoghq.com/service: advertisements-service
-    tags.datadoghq.com/env: development
+    tags.datadoghq.com/env: ENV
     app: ecommerce
   name: advertisements
 spec:
@@ -13,5 +13,5 @@ spec:
     targetPort: 5002
   selector:
     tags.datadoghq.com/service: advertisements-service
-    tags.datadoghq.com/env: development
+    tags.datadoghq.com/env: ENV
     app: ecommerce
