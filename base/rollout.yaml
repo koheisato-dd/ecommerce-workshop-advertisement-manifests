@@ -2,15 +2,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   labels:
-    tags.datadoghq.com/env: development
+    tags.datadoghq.com/env: ENV
     tags.datadoghq.com/service: advertisements-service
     app: ecommerce
   name: advertisements
 spec:
-  replicas: 4
+  replicas: REPLICAS
   selector:
     matchLabels:
-      tags.datadoghq.com/env: development
+      tags.datadoghq.com/env: ENV
       tags.datadoghq.com/service: advertisements-service
       app: ecommerce
   strategy:
@@ -18,12 +18,12 @@ spec:
       maxSurge: 1
       maxUnavailable: 1
       steps:
-      - setWeight: 25
+      - setWeight: WEIGHT1
       - pause: {}
   template:
     metadata:
       labels:
-        tags.datadoghq.com/env: development
+        tags.datadoghq.com/env: ENV
         tags.datadoghq.com/service: advertisements-service
         tags.datadoghq.com/version: VERSION
         app: ecommerce
