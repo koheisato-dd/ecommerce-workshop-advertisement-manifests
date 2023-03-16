@@ -1,0 +1,42 @@
+name: Run Datadog Synthetic tests and Create PR to main
+
+on:
+  push:
+    branches: [ "staging" ]
+
+env:
+  BASE_BRANCH: main
+  REVIEWER: dd-shocnt
+
+jobs:
+  e2e-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Run Datadog Synthetic tests
+      uses: DataDog/synthetics-ci-github-action@2b56dc0cca9daa14ab69c0d1d6844296de8f941e
+      with:
+        api_key: ${{secrets.DD_API_KEY}}
+        app_key: ${{secrets.DD_APP_KEY}}
+        test_search_query: 'tag:e2e-tests'
+
+  create_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: check PR
+        id: check_pr
+        run: |
+          echo "count=$(gh pr list -B ${{ env.BASE_BRANCH }} -H ${{ github.ref_name }} --json 'id' -q '.[] | length')" >> $GITHUB_OUTPUT
+      - name: Create PR
+        if: ${{ steps.check_pr.outputs.count == '' }}
+        run: gh pr create --fill -B ${{ env.BASE_BRANCH }} -r ${{ env.REVIEWER }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
