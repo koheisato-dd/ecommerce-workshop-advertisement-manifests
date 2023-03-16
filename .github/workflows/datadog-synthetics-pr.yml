@@ -17,12 +17,12 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Run Datadog Synthetic tests
-      uses: DataDog/synthetics-ci-github-action@2b56dc0cca9daa14ab69c0d1d6844296de8f941e
+    - name: Datadog Synthetics CI
+      uses: DataDog/synthetics-ci-github-action@v0.10.0
       with:
         api_key: ${{secrets.DD_API_KEY}}
         app_key: ${{secrets.DD_APP_KEY}}
-        test_search_query: 'app:ecommerce'
+        public_ids: '3r4-f83-ky3, gum-n39-z2p'
 
   create_pr:
     needs: e2e-test
