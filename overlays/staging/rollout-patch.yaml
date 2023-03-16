@@ -20,5 +20,5 @@ spec:
         tags.datadoghq.com/version: "75768e604bc35edc82001e9504d32c1c7777695e"
     spec:
       containers:
-      - image: "75768e604bc35edc82001e9504d32c1c7777695e"
+      - image: "shocnt/ads-service:75768e604bc35edc82001e9504d32c1c7777695e"
         name: advertisements
