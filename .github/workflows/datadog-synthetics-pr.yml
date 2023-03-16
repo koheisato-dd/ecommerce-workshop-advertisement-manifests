@@ -22,7 +22,7 @@ jobs:
       with:
         api_key: ${{secrets.DD_API_KEY}}
         app_key: ${{secrets.DD_APP_KEY}}
-        test_search_query: 'tag:e2e-tests'
+        test_search_query: 'app:ecommerce'
 
   create_pr:
     runs-on: ubuntu-latest
