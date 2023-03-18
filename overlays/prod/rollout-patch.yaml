@@ -11,6 +11,13 @@ spec:
       tags.datadoghq.com/env: prod
   strategy:
     canary:
+      analysis:
+        templates:
+        - templateName: trace-error-rate
+        startingStep: 1
+        args:
+        - name: service-name
+          value: advertisements-service
       steps:
       - setWeight: 25
       - pause: {}
