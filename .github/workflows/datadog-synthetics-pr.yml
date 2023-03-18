@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: jakejarvis/wait-action@v0.1.1
+      with:
+        time: '3m'
+    
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
