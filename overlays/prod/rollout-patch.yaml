@@ -25,8 +25,8 @@ spec:
     metadata:
       labels:
         tags.datadoghq.com/env: prod
-        tags.datadoghq.com/version: "710b2b0e2de64c1c4c4bcfe95dafb9d1995920c0"
+        tags.datadoghq.com/version: "3faea1bfbde560b5b227df90d87c7bf893474478"
     spec:
       containers:
-      - image: "shocnt/ads-service:710b2b0e2de64c1c4c4bcfe95dafb9d1995920c0"
+      - image: "shocnt/ads-service:3faea1bfbde560b5b227df90d87c7bf893474478"
         name: advertisements
