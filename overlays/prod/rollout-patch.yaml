@@ -20,7 +20,7 @@ spec:
         - {name: version, value: "e51d60b48ffb10238c85284d029fb88f95e29337"}
       steps:
       - setWeight: 25
-      - pause: {duration: 10m}
+      - pause: {duration: 5m}
   template:
     metadata:
       labels:
