@@ -16,10 +16,8 @@ spec:
         - templateName: trace-error-rate
         startingStep: 1
         args:
-        - name: service-name
-          value: advertisements-service
-        - name: version
-          value: "c7fb4473c9c31769057ceb56677fd9cc9d0add5c"
+        - {name: service-name, value: advertisements-service}
+        - {name: version, value: "c7fb4473c9c31769057ceb56677fd9cc9d0add5c"}
       steps:
       - setWeight: 25
       - pause: {duration: 10m}
