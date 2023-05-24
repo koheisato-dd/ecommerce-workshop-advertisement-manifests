@@ -7,7 +7,7 @@ on:
 
 env:
   BASE_BRANCH: staging
-  REVIEWER: dd-shocnt
+  REVIEWER: koheisato-dd
 
 jobs:
   create_pr:
