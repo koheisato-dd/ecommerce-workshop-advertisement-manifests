@@ -24,8 +24,8 @@ jobs:
     - name: Datadog Synthetics CI
       uses: DataDog/synthetics-ci-github-action@v0.10.0
       with:
-        api_key: 3af74e80e61bc19556859de40f1a689b
-        app_key: a0e35b39c667b5de11c0b14441df9321e0730814
+        api_key: 
+        app_key: 
         public_ids: '3r4-f83-ky3, gum-n39-z2p'
 
   create_pr:
