@@ -20,5 +20,5 @@ spec:
         tags.datadoghq.com/version: "c41dd633a83e235f01d2867c9f282824e1ad2765"
     spec:
       containers:
-      - image: "koheisato-dd/ads-service:c41dd633a83e235f01d2867c9f282824e1ad2765"
+      - image: "koheisato0714/ads-service:c41dd633a83e235f01d2867c9f282824e1ad2765"
         name: advertisements
