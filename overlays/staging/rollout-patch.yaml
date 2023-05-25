@@ -20,5 +20,5 @@ spec:
         tags.datadoghq.com/version: "41601650d7aca39c382fdeb8819c02bbbab7fda9"
     spec:
       containers:
-      - image: "shocnt/ads-service:41601650d7aca39c382fdeb8819c02bbbab7fda9"
+      - image: "koheisato0714/ads-service:41601650d7aca39c382fdeb8819c02bbbab7fda9"
         name: advertisements
